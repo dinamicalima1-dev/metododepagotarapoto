@@ -1,1 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Métodos de Pago - Tarapoto</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#f3f3f3;
+padding:30px;
+}
+
+.container{
+max-width:1350px;
+margin:auto;
+}
+
+.logo-principal{
+text-align:center;
+margin-bottom:20px;
+}
+
+.logo-principal img{
+max-width:330px;
+}
+
+.titulo{
+text-align:center;
+font-size:54px;
+font-weight:bold;
+color:#c40000;
+margin-bottom:35px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+}
+
+.card{
+background:#fff;
+border:1px solid #d50000;
+border-radius:8px;
+padding:25px;
+text-align:center;
+}
+
+.logo{
+height:60px;
+margin-bottom:15px;
+max-width:220px;
+object-fit:contain;
+}
+
+.card h2{
+font-size:32px;
+margin-bottom:15px;
+}
+
+.card p{
+font-size:22px;
+line-height:1.45;
+}
+
+.dato{
+font-size:24px;
+font-weight:bold;
+margin:8px 0 18px;
+word-break:break-word;
+}
+
+.numero{
+font-size:28px;
+font-weight:bold;
+margin:15px 0;
+}
+
+button{
+background:#c40000;
+color:#fff;
+border:none;
+padding:12px 28px;
+border-radius:30px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+background:#a60000;
+}
+
+.qr{
+width:190px;
+height:190px;
+object-fit:contain;
+display:block;
+margin:18px auto;
+}
+
+@media(max-width:900px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.titulo{
+font-size:36px;
+}
+
+.card p{
+font-size:18px;
+}
+
+.dato{
+font-size:18px;
+}
+
+}
+
+</style>
+
+<script>
+
+function copiarTexto(texto){
+
+navigator.clipboard.writeText(texto);
+
+alert("Número copiado");
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo-principal">
+<img src="DINAMICA LOGO.png">
+</div>
+
+<div class="titulo">
+Métodos de pago - SEDE TARAPOTO
+</div>
+
+<div class="grid">
+<!-- ================= BCP ================= -->
+
+<div class="card">
+
+    <img src="LOGO BCP - copia.png" class="logo">
+
+    <p><strong>Titular:</strong></p>
+    <p>Dinamica Implementos &amp; Pecas Selva SAC</p>
+
+    <br>
+
+    <p><strong>Cuenta Soles</strong></p>
+    <div class="dato">550-2684298-0-74</div>
+    <button onclick="copiarTexto('5502684298074')">Copiar número</button>
+
+    <br><br>
+
+    <p><strong>CCI Soles</strong></p>
+    <div class="dato">002-550-002684298074-25</div>
+    <button onclick="copiarTexto('00255000268429807425')">Copiar número</button>
+
+    <br><br>
+
+    <p><strong>Cuenta Dólares</strong></p>
+    <div class="dato">550-9290407-1-57</div>
+    <button onclick="copiarTexto('5509290407157')">Copiar número</button>
+
+    <br><br>
+
+    <p><strong>CCI Dólares</strong></p>
+    <div class="dato">002-550-009290407157-25</div>
+    <button onclick="copiarTexto('00255000929040715725')">Copiar número</button>
+
+</div>
+
+<!-- ================= BBVA ================= -->
+
+<div class="card">
+
+    <img src="LOGO BBVA.svg" class="logo">
+
+    <p><strong>Titular:</strong></p>
+    <p>Dinamica Implementos &amp; Pecas Selva SAC</p>
+
+    <br>
+
+    <p><strong>Cuenta Soles</strong></p>
+    <div class="dato">0011-0310-0100134751</div>
+    <button onclick="copiarTexto('001103100100134751')">Copiar número</button>
+
+    <br><br>
+
+    <p><strong>CCI Soles</strong></p>
+    <div class="dato">0011-310-000100134751-05</div>
+    <button onclick="copiarTexto('001131000010013475105')">Copiar número</button>
+
+</div>
+<!-- ================= CAJA PIURA ================= -->
+
+<div class="card">
+
+    <img src="CAJA PIURA LOGO.svg" class="logo">
+
+    <h2>Cuenta Recaudadora</h2>
+
+    <br>
+
+    <p><strong>Con nombre:</strong></p>
+    <p>Dinamica Selva SAC</p>
+
+    <br>
+
+    <p><strong>Código Soles</strong></p>
+    <div class="numero">14393</div>
+
+    <button onclick="copiarTexto('14393')">Copiar número</button>
+
+    <br><br>
+
+    <p><strong>Titular:</strong></p>
+    <p>Dinamica Implementos &amp; Pecas Selva SAC</p>
+
+    <br>
+
+    <p><strong>CCI Soles</strong></p>
+    <div class="dato">801-051-210013481941-42</div>
+
+    <button onclick="copiarTexto('80105121001348194142')">Copiar número</button>
+
+</div>
+
+<!-- ================= YAPE ================= -->
+
+<div class="card">
+
+    <img src="LOGO YAPE.png" class="logo">
+
+    <h2>Pago con Yape</h2>
+
+    <img src="Yape QR Tarapoto.JPG" class="qr">
+
+    <p><strong>Titular:</strong></p>
+    <p>Dinamica Implementos &amp; Pecas SAC</p>
+
+    <br>
+
+    <div class="numero">933 743 066</div>
+
+    <button onclick="copiarTexto('933743066')">Copiar número</button>
+
+</div>
+<!-- ================= YAPE ================= -->
+
+<div class="card">
+
+    <img src="LOGO YAPE.png" class="logo">
+
+    <h2>Pago con Yape</h2>
+
+    <img src="Yape QR Tarapoto.JPG" class="qr">
+
+    <p><strong>Titular:</strong></p>
+    <p>Dinamica Implementos &amp; Pecas SAC</p>
+
+    <br>
+
+    <div class="numero">933 743 066</div>
+
+    <button onclick="copiarTexto('933743066')">Copiar número</button>
+
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
